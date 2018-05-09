@@ -28,7 +28,7 @@ p {
 .navbar {
     color: white;
     font-size: 16px;
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(230, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -78,7 +78,7 @@ p {
     line-height: 24px;
     width: 160px;
     border-radius: 5px;
-    background-color: rgba(255, 0, 0, 1);
+    background-color: rgba(225, 125, 0, 1);
     cursor: pointer;
 }
 
