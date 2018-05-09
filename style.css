@@ -1,7 +1,6 @@
 html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background: rgb(242, 242, 242);
-    margin-top: 42px;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -10,6 +9,8 @@ html {
 
 body {
     margin: 0;
+    background-color: #101010;
+    color: #E0E0E0;
 }
 
 h1 {
@@ -28,7 +29,7 @@ p {
 .navbar {
     color: white;
     font-size: 16px;
-    background-color: rgba(230, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -40,7 +41,8 @@ p {
     backdrop-filter: saturate(180%) blur(20px);
 }
 
-.nav-content, .footer-content {
+.nav-content,
+.footer-content {
     max-width: 980px;
     padding: 0 22px;
     margin: 0 auto;
@@ -53,11 +55,15 @@ p {
 
 .main {
     padding: 20px;
-    background-color: white;
+    background-color: #202020;
 }
 
 .text-center {
     text-align: center;
+}
+
+.hello {
+    margin-top: 42px;
 }
 
 .introduction {
@@ -83,7 +89,8 @@ p {
 }
 
 .join-button.disabled {
-    background-color: rgba(210,0,0, 0.5);
+    background-color: gray;
+    opacity: 0.5;
 }
 
 .comming-soon {
@@ -95,7 +102,7 @@ footer {
     width: 100%;
     padding: 20px 0;
     line-height: 1.6;
-    background-color: rgb(242, 242, 242);
+    background-color: #101010;
 }
 
 .copyright {
@@ -108,22 +115,21 @@ footer {
     flex-direction: column;
 }
 
-@media ( min-width: 375px ) {
+@media ( min-width: 375px) {
 
     br.small {
         display: none;
     }
-
 }
 
-@media ( max-width: 414px ) {
+@media ( max-width: 414px) {
 
-    .nav-content, .footer-content {
+    .nav-content,
+    .footer-content {
         padding: 0 16px;
     }
 
     .main {
         padding: 16px;
     }
-
 }
