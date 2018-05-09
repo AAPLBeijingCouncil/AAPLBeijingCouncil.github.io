@@ -1,0 +1,124 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: rgb(242, 242, 242);
+    margin-top: 42px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust： 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 24px 0;
+    font-size: 40px;
+}
+
+p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+.navbar {
+    color: white;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 12px 0;
+    z-index: 9999;
+    width: 100%;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.nav-content, .footer-content {
+    max-width: 980px;
+    padding: 0 22px;
+    margin: 0 auto;
+}
+
+.nav-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    padding: 20px;
+    background-color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.introduction {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.call-up {
+    margin: 32px auto;
+}
+
+.join-button {
+    display: block;
+    margin: 16px auto;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 24px;
+    width: 160px;
+    border-radius: 5px;
+    background-color: rgba(0, 122, 255, 1);
+    cursor: pointer;
+}
+
+.join-button.disabled {
+    background-color: rgba(0, 122, 255, 0.5);
+}
+
+.comming-soon {
+    color: rgb(199, 199, 204);
+    font-size: 12px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    line-height: 1.6;
+    background-color: rgb(242, 242, 242);
+}
+
+.copyright {
+    font-size: 12px;
+    color: rgb(136, 136, 136);
+}
+
+@media ( min-width: 375px ) {
+
+    br.small {
+        display: none;
+    }
+
+}
+
+@media ( max-width: 414px ) {
+
+    .nav-content, .footer-content {
+        padding: 0 16px;
+    }
+
+    .main {
+        padding: 16px;
+    }
+
+}
