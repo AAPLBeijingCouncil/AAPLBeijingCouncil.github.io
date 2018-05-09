@@ -158,13 +158,14 @@ footer ol {
 }
 
 .copyright {
-    margin-right: 30px;
+    margin-right: 8px;
     display: inline-block;
 }
 
 .language {
-    float: right;
-    display: inline-block;
+    float: none;
+    display: block;
+    margin-top: 10px;
 }
 
 .language a {
@@ -177,14 +178,36 @@ footer ol {
     color: rgb(82, 180, 219);
 }
 
-@media ( min-width: 375px) {
+@media ( min-width: 414px ) {
 
-    br.small {
+    br.plus {
+        display: none;
+    }
+
+    body.zh-cn footer .language {
+        float: right;
+        display: inline-block;
+        margin-top: 0;
+    }
+}
+
+@media ( min-width: 375px ) {
+    
+    body.zh-cn footer br.plus {
         display: none;
     }
 }
 
-@media ( max-width: 414px) {
+@media ( min-width: 507px ) {
+    
+    .language {
+        float: right;
+        display: inline-block;
+        margin-top: 0;
+    }
+}
+
+@media ( max-width: 414px ) {
 
     .nav-content,
     .footer-content {
