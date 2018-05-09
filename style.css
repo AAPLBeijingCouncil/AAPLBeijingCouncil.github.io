@@ -29,7 +29,6 @@ p {
 .navbar {
     color: white;
     font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -37,8 +36,24 @@ p {
     padding: 12px 0;
     z-index: 9999;
     width: 100%;
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+}
+        
+/* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃 */
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .navbar {
+        background: rgba(0, 0, 0, 0.4);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: #eee;
+    }
+}
+
+/* 若浏览器器不支持，则不透明化 */
+@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+    .navbar {
+        background: #080808;
+        /* box-shadow: 0px 10px 30px rgba(0, 0, 0, .08), 0px 6px 10px rgba(0, 0, 0, .16); */
+    }
 }
 
 .nav-content,
