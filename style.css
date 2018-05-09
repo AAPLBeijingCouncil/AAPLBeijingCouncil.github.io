@@ -48,11 +48,11 @@ p {
     }
 }
 
-/* 若浏览器器不支持，则使用 MaterialDesign 的风格 */
+/* 若浏览器器不支持，则不透明化 */
 @supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
     .navbar {
-        background: #303030;
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, .08), 0px 6px 10px rgba(0, 0, 0, .16);
+        background: #080808;
+        /* box-shadow: 0px 10px 30px rgba(0, 0, 0, .08), 0px 6px 10px rgba(0, 0, 0, .16); */
     }
 }
 
