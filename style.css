@@ -26,6 +26,19 @@ p {
     word-wrap: break-word;
 }
 
+hr {
+    opacity: 0.15;
+}
+    
+footer hr {
+    max-width: 100%;
+    width: 980px;
+}
+
+span.nowrap {
+    white-space: nowrap;
+}
+
 .navbar {
     color: white;
     font-size: 16px;
@@ -78,7 +91,7 @@ p {
 }
 
 .hello {
-    margin-top: 42px;
+    margin-top: 62px;
 }
 
 .introduction {
@@ -109,8 +122,21 @@ p {
 }
 
 .comming-soon {
-    color: rgb(199, 199, 204);
+    color: rgb(80, 80, 82);
     font-size: 12px;
+}
+
+.t-shirt {
+    background: #2a2a2a;
+    border-radius: 7px;
+    max-width: 680px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 16px 8px;
+}
+
+.t-shirt p.introduction {
+    margin: 4px;
 }
 
 footer {
@@ -120,14 +146,35 @@ footer {
     background-color: #101010;
 }
 
-.copyright {
+.footer-content {
+    display: block;
     font-size: 12px;
     color: rgb(136, 136, 136);
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
+footer ol {
+    padding: 0 18px;
+    margin-top: 0;
+}
+
+.copyright {
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.language {
+    float: right;
+    display: inline-block;
+}
+
+.language a {
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+    transition: color 0.2s ease 0.05s;
+}
+
+.language a:hover {
+    color: rgb(82, 180, 219);
 }
 
 @media ( min-width: 375px) {
