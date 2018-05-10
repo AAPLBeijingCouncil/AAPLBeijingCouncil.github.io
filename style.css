@@ -171,7 +171,7 @@ footer ol {
 }
 
 .language a {
-    text-decoration: none;
+    text-decoration: underline;
     color: rgb(136, 136, 136);
     transition: color 0.2s ease 0.05s;
 }
