@@ -29,7 +29,7 @@ p {
 hr {
     opacity: 0.15;
 }
-    
+
 footer hr {
     max-width: 100%;
     width: 980px;
@@ -50,8 +50,9 @@ span.nowrap {
     z-index: 9999;
     width: 100%;
 }
-        
+
 /* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃 */
+
 @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .navbar {
         background: rgba(0, 0, 0, 0.4);
@@ -62,6 +63,7 @@ span.nowrap {
 }
 
 /* 若浏览器器不支持，则不透明化 */
+
 @supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
     .navbar {
         background: #080808;
@@ -178,12 +180,10 @@ footer ol {
     color: rgb(82, 180, 219);
 }
 
-@media ( min-width: 414px ) {
-
+@media ( min-width: 414px) {
     br.plus {
         display: none;
     }
-
     body.zh-cn footer .language {
         float: right;
         display: inline-block;
@@ -191,15 +191,13 @@ footer ol {
     }
 }
 
-@media ( min-width: 375px ) {
-    
+@media ( min-width: 375px) {
     body.zh-cn footer br.plus {
         display: none;
     }
 }
 
-@media ( min-width: 507px ) {
-    
+@media ( min-width: 507px) {
     .language {
         float: right;
         display: inline-block;
@@ -207,13 +205,11 @@ footer ol {
     }
 }
 
-@media ( max-width: 414px ) {
-
+@media ( max-width: 414px) {
     .nav-content,
     .footer-content {
         padding: 0 16px;
     }
-
     .main {
         padding: 16px;
     }
