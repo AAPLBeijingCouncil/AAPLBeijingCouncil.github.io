@@ -184,7 +184,7 @@ span.nowrap {
 }
 
 footer {
-    width: 100%;
+    width: calc(100vw);
     padding: 20px 0;
     line-height: 1.6;
     background-color: #101010;
