@@ -4,7 +4,34 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust： 100%;
+    text-size-adjust：100%;
+}
+
+.container {
+    perspective: 1px; 
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #202020;
+}
+
+.box {
+    position: absolute;
+    transform: translateZ(0);
+}
+
+.webbackground {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(webbg.svg);
+    background-repeat: repeat-y;
+    background-position-x: center;
+    background-size: 150%;
+    opacity: 0.6;
+
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transform: translate3d(0, -32px, -0.5px) scale(1.5);
 }
 
 body {
@@ -49,10 +76,23 @@ span.nowrap {
     padding: 12px 0;
     z-index: 9999;
     width: 100%;
+
+    /* Default: 若浏览器不支持 backdrop-filter，则不透明化 */
+    background: #080808;
+    /* box-shadow: 0px 10px 30px rgba(0, 0, 0, .08), 0px 6px 10px rgba(0, 0, 0, .16); */
 }
 
+.t-shirt {
+    border-radius: 7px;
+    max-width: 680px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 16px 8px;
+    /* Default: 若浏览器不支持 backdrop-filter，则不透明化 */
+    background: #2a2a2a;
+}
+        
 /* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃 */
-
 @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .navbar {
         background: rgba(0, 0, 0, 0.4);
@@ -60,14 +100,12 @@ span.nowrap {
         backdrop-filter: blur(10px);
         color: #eee;
     }
-}
 
-/* 若浏览器器不支持，则不透明化 */
-
-@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-    .navbar {
-        background: #080808;
-        /* box-shadow: 0px 10px 30px rgba(0, 0, 0, .08), 0px 6px 10px rgba(0, 0, 0, .16); */
+    .t-shirt {
+        background: rgba(0, 0, 0, 0.4);
+        color: #eee;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
     }
 }
 
@@ -88,8 +126,8 @@ span.nowrap {
         padding-left: max(22px, env(safe-area-inset-left));
         padding-right: max(22px, env(safe-area-inset-right));
     }
-}    
-    
+} 
+
 .nav-content a {
     color: white;
     text-decoration: none;
@@ -97,7 +135,8 @@ span.nowrap {
 
 .main {
     padding: 20px;
-    background-color: #202020;
+/*    background-color: #202020;*/
+    z-index:99999999999;
 }
 
 .text-center {
@@ -138,15 +177,6 @@ span.nowrap {
 .comming-soon {
     color: rgb(80, 80, 82);
     font-size: 12px;
-}
-
-.t-shirt {
-    background: #2a2a2a;
-    border-radius: 7px;
-    max-width: 680px;
-    margin: auto;
-    margin-top: 50px;
-    padding: 16px 8px;
 }
 
 .t-shirt p.introduction {
@@ -196,6 +226,7 @@ footer ol {
     br.plus {
         display: none;
     }
+
     body.zh-cn footer .language {
         float: right;
         display: inline-block;
@@ -222,6 +253,7 @@ footer ol {
     .footer-content {
         padding: 0 16px;
     }
+
     .main {
         padding: 16px;
     }
