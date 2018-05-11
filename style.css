@@ -122,17 +122,27 @@ span.nowrap {
     display: block;
     margin: 16px auto;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 24px;
     width: 160px;
     border-radius: 5px;
-    background-color: rgba(0, 122, 255, 0);
+/*    background-color: rgba(0, 122, 255, 0);*/
+/*    background-color:rgba(43, 126, 247, 0.8);*/
+/*    iOS按键蓝👆*/
+/*    background-color:rgba(233, 74, 97, 1);*/
+/*    Apple Music红👆*/
+    background-color:rgba(162, 38, 42, 1);
+/*    Product RED的红👆*/
     cursor: pointer;
 }
 
 .join-button.disabled {
     background-color: gray;
     opacity: 0.5;
+}
+
+.join-button-a{
+    text-decoration:none
 }
 
 .comming-soon {
@@ -224,5 +234,47 @@ footer ol {
     }
     .main {
         padding: 16px;
+    }
+}
+
+.QR-pic{
+/*    height:calc(10vw);*/
+    height: 20%;
+/*    background: #fff;*/
+/*    border-color: #fff;*/
+/*    border-width: 10px;*/
+/*    border-style: solid;*/
+/*    border-radius: 10px;*/
+/*    border-radius: 7%;*/
+}
+
+/* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃 */
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .QR {
+        background: #2a2a2a;
+        border-radius: 7px;
+        max-width: 680px;
+        margin: 50px;
+/*        margin-top: 50px;*/
+/*        padding: 16px 8px;*/
+        padding: 20px;
+/*        background: rgba(100, 100, 100, 0.7);*/
+        background: rgba(0, 0, 0, 0.4);
+        color: #eee;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+
+ 若浏览器器不支持，则不透明化 
+@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+    .QR {
+        background: #2a2a2a;
+        border-radius: 7px;
+        max-width: 680px;
+        margin: 50px;
+/*        margin-top: 50px;*/
+/*        padding: 16px 8px;*/
+        padding: 20px;
     }
 }
