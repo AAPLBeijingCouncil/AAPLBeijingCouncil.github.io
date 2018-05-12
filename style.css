@@ -18,6 +18,10 @@ h1 {
     font-size: 40px;
 }
 
+body.dark h1 {
+    color: white;
+}
+
 p {
     margin-bottom: 24px;
     font-size: 16px;
@@ -26,13 +30,8 @@ p {
     word-wrap: break-word;
 }
 
-hr {
-    opacity: 0.15;
-}
-
-footer hr {
-    max-width: 100%;
-    width: 980px;
+a {
+    text-decoration: none;
 }
 
 span.nowrap {
@@ -49,29 +48,19 @@ span.nowrap {
     padding: 12px 0;
     z-index: 9999;
     width: 100%;
+    background-color: rgba(8, 8, 8, 1);
 }
 
-/* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃 */
-
-@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+/* 若浏览器支持 backdrop-filter，则不透明度为 60%，并启用高斯模糊 */
+@supports ( -webkit-backdrop-filter: none ) or ( backdrop-filter: none ) {
     .navbar {
-        background: rgba(0, 0, 0, 0.4);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        color: #eee;
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
     }
 }
 
-/* 若浏览器器不支持，则不透明化 */
-
-@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-    .navbar {
-        background: #080808;
-        /* box-shadow: 0px 10px 30px rgba(0, 0, 0, .08), 0px 6px 10px rgba(0, 0, 0, .16); */
-    }
-}
-
-/* Altered by Houston: make the page look good on iPhone X*/
+/* Altered by Houston: make the page look good on iPhone X */
 .nav-content,
 .footer-content {
     max-width: 980px;
@@ -88,23 +77,47 @@ span.nowrap {
         padding-left: max(22px, env(safe-area-inset-left));
         padding-right: max(22px, env(safe-area-inset-right));
     }
-}    
-    
-.nav-content a {
-    color: white;
-    text-decoration: none;
 }
 
-.main {
+.nav-content a {
+    color: white;
+}
+
+main {
     padding: 20px;
     background-color: #202020;
+}
+
+main {
+    background-size: 444px 2673px;
+    background-position: left top;
+    background-repeat: repeat-y;
+    background-image: image-set(url("/images/bg_device_left.png") 1x, url("/images/bg_device_left@2x.png") 2x);
+    animation: device-river 120s linear infinite;
+    animation-fill-mode: both;
+}
+
+@media ( min-width: 768px ) {
+    main {
+        background-size: 444px 2673px, 500px 2673px;
+        background-position: left top, right top;
+        background-repeat: repeat-y , repeat-y;
+        background-image: image-set(url("/images/bg_device_left.png") 1x, url("/images/bg_device_left@2x.png") 2x), image-set(url("/images/bg_device_right.png") 1x, url("/images/bg_device_right@2x.png") 2x);
+        animation: device-river 120s linear infinite;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes device-river {
+    from { background-position: left 2673px, right 2673px; }
+    to { background-position: left 0, right 0; }
 }
 
 .text-center {
     text-align: center;
 }
 
-.hello {
+.section {
     margin-top: 62px;
 }
 
@@ -112,6 +125,10 @@ span.nowrap {
     max-width: 680px;
     margin-left: auto;
     margin-right: auto;
+}
+
+html[lang=zh-cmn-Hans-CN] .introduction {
+    max-width: 620px;
 }
 
 .call-up {
@@ -126,23 +143,18 @@ span.nowrap {
     line-height: 24px;
     width: 160px;
     border-radius: 5px;
-/*    background-color: rgba(0, 122, 255, 0);*/
-/*    background-color:rgba(43, 126, 247, 0.8);*/
-/*    iOS按键蓝👆*/
-/*    background-color:rgba(233, 74, 97, 1);*/
-/*    Apple Music红👆*/
-    background-color:rgba(162, 38, 42, 1);
-/*    Product RED的红👆*/
+    background-color:rgba(198, 16, 39, 1);
     cursor: pointer;
+    transition: background-color 160ms ease 20ms;
+}
+
+.join-button:hover {
+    background-color: #e7132d;
 }
 
 .join-button.disabled {
     background-color: gray;
     opacity: 0.5;
-}
-
-.join-button-a{
-    text-decoration:none
 }
 
 .comming-soon {
@@ -159,8 +171,85 @@ span.nowrap {
     padding: 16px 8px;
 }
 
-.t-shirt p.introduction {
+.pre-order {
     margin: 4px;
+}
+
+.how-to-join {
+    max-width: 680px;
+    margin: 64px auto;
+    counter-reset: steps-counter;
+}
+
+.step {
+    display: block;
+    position: relative;
+    margin: 30px 0;
+    padding: 2px 0 32px 68px;
+    width: calc(100% - 68px);
+}
+
+.step:not(:last-child) {
+    border-bottom: 1px solid #333;
+}
+
+.step:before {
+    content: counter(steps-counter);
+    counter-increment: steps-counter;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    font-size: 72px;
+    font-weight: 200;
+    line-height: 1em;
+    color: #b00e23;
+}
+
+.step > div {
+    display: table-cell;
+}
+
+.step-text h4 + p, .step-text p + * {
+    opacity: 0.6;
+}
+
+.step-text {
+    vertical-align: top;
+}
+
+.step-text p:last-child {
+    margin-bottom: 0;
+}
+
+.step-text-before-img {
+    padding-right: 32px;
+}
+
+a.step-link {
+    color: #c61027;
+    transition: color 280ms ease 20ms;
+}
+
+a.step-link:hover {
+    color: #e7132d;
+}
+
+.QR-code-bg {
+    width: 120px;
+    height: 120px;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0 3px 4px 1px #000;
+}
+
+.QR-code {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: url("/images/QR-code-join-wechat-group.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 footer {
@@ -173,12 +262,18 @@ footer {
 .footer-content {
     display: block;
     font-size: 12px;
-    color: rgb(136, 136, 136);
+    color: rgb(88, 88, 88);
 }
 
 footer ol {
     padding: 0 18px;
     margin-top: 0;
+}
+
+.final {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #333;
 }
 
 .copyright {
@@ -189,13 +284,12 @@ footer ol {
 .language {
     float: none;
     display: block;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .language a {
-    text-decoration: none;
-    color: rgb(180, 180, 180);
-    transition: color 0.2s ease 0.05s;
+    color: rgb(150, 150, 150);
+    transition: color 240ms ease 40ms;
 }
 
 .language a:hover {
@@ -206,7 +300,7 @@ footer ol {
     br.plus {
         display: none;
     }
-    body.zh-cn footer .language {
+    html[lang=zh-cmn-Hans-CN] footer .language {
         float: right;
         display: inline-block;
         margin-top: 0;
@@ -214,7 +308,7 @@ footer ol {
 }
 
 @media ( min-width: 375px ) {
-    body.zh-cn footer br.plus {
+    html[lang=zh-cmn-Hans-CN] footer br.plus {
         display: none;
     }
 }
@@ -227,6 +321,21 @@ footer ol {
     }
 }
 
+@media ( max-width: 500px ) {
+    html[lang=en-US] .step > div {
+        display: block;
+    }
+    html[lang=en-US] .step-text > *:first-child {
+        margin-top: 0;
+    }
+    html[lang=en-US] .step-text-before-img {
+        padding-right: 0;
+    }
+    html[lang=en-US] .step-img .QR-code-bg {
+        margin: 24px 0 0;
+    }
+}
+
 @media ( max-width: 414px ) {
     .nav-content,
     .footer-content {
@@ -235,46 +344,47 @@ footer ol {
     .main {
         padding: 16px;
     }
+    .step > div {
+        display: block;
+    }
+    .step-text > *:first-child {
+        margin-top: 0;
+    }
+    .step-text-before-img {
+        padding-right: 0;
+    }
+    .step-img .QR-code-bg {
+        margin: 24px 0 0;
+    }
 }
 
-.QR-pic{
-/*    height:calc(10vw);*/
-    height: 20%;
-/*    background: #fff;*/
-/*    border-color: #fff;*/
-/*    border-width: 10px;*/
-/*    border-style: solid;*/
-/*    border-radius: 10px;*/
-/*    border-radius: 7%;*/
-}
-
-/* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃 */
-@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
-    .QR {
-        background: #2a2a2a;
-        border-radius: 7px;
-        max-width: 680px;
-        margin: 50px;
+/* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃*/
+/*@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {*/
+/*    .QR {*/
+/*        background: #2a2a2a;*/
+/*        border-radius: 7px;*/
+/*        max-width: 680px;*/
+/*        margin: 50px;*/
 /*        margin-top: 50px;*/
 /*        padding: 16px 8px;*/
-        padding: 20px;
+/*        padding: 20px;*/
 /*        background: rgba(100, 100, 100, 0.7);*/
-        background: rgba(0, 0, 0, 0.4);
-        color: #eee;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-    }
-}
-
- 若浏览器器不支持，则不透明化 
-@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-    .QR {
-        background: #2a2a2a;
-        border-radius: 7px;
-        max-width: 680px;
-        margin: 50px;
+/*        background: rgba(0, 0, 0, 0.4);*/
+/*        color: #eee;*/
+/*        -webkit-backdrop-filter: blur(10px);*/
+/*        backdrop-filter: blur(10px);*/
+/*    }*/
+/*}*/
+/**/
+/* 若浏览器器不支持，则不透明化 */
+/*@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {*/
+/*    .QR {*/
+/*        background: #2a2a2a;*/
+/*        border-radius: 7px;*/
+/*        max-width: 680px;*/
+/*        margin: 50px;*/
 /*        margin-top: 50px;*/
 /*        padding: 16px 8px;*/
-        padding: 20px;
-    }
-}
+/*        padding: 20px;*/
+/*    }*/
+/*}*/
