@@ -358,6 +358,13 @@ footer ol {
     }
 }
 
+.QR-blur{  
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);    
+}
+
 /* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃*/
 /*@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {*/
 /*    .QR {*/
