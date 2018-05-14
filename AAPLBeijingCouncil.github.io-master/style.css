@@ -1,0 +1,390 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Microsoft YaHei UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: rgb(242, 242, 242);
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust： 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #101010;
+    color: #E0E0E0;
+}
+
+h1 {
+    margin: 24px 0;
+    font-size: 40px;
+}
+
+body.dark h1 {
+    color: white;
+}
+
+p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+span.nowrap {
+    white-space: nowrap;
+}
+
+.navbar {
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 12px 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: rgba(8, 8, 8, 1);
+}
+
+/* 若浏览器支持 backdrop-filter，则不透明度为 60%，并启用高斯模糊 */
+@supports ( -webkit-backdrop-filter: none ) or ( backdrop-filter: none ) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+}
+
+/* Altered by Houston: make the page look good on iPhone X */
+.nav-content,
+.footer-content {
+    max-width: 980px;
+    padding: 0 22px;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    margin: 0 auto;
+}
+
+/* If support max() */
+@supports (padding: max(0px)) {
+    .nav-content,
+    .footer-content {
+        padding-left: max(22px, env(safe-area-inset-left));
+        padding-right: max(22px, env(safe-area-inset-right));
+    }
+}
+
+.nav-content a {
+    color: white;
+}
+
+main {
+    padding: 20px;
+    background-color: #202020;
+}
+
+main {
+    background-size: 444px 2673px;
+    background-position: left top;
+    background-repeat: repeat-y;
+    background-image: image-set(url("/images/bg_device_left.png") 1x, url("/images/bg_device_left@2x.png") 2x);
+    animation: device-river 120s linear infinite;
+    animation-fill-mode: both;
+}
+
+@media ( min-width: 768px ) {
+    main {
+        background-size: 444px 2673px, 500px 2673px;
+        background-position: left top, right top;
+        background-repeat: repeat-y , repeat-y;
+        background-image: image-set(url("/images/bg_device_left.png") 1x, url("/images/bg_device_left@2x.png") 2x), image-set(url("/images/bg_device_right.png") 1x, url("/images/bg_device_right@2x.png") 2x);
+        animation: device-river 120s linear infinite;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes device-river {
+    from { background-position: left 2673px, right 2673px; }
+    to { background-position: left 0, right 0; }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section {
+    margin-top: 62px;
+}
+
+.introduction {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html[lang=zh-cmn-Hans-CN] .introduction {
+    max-width: 620px;
+}
+
+.call-up {
+    margin: 32px auto;
+}
+
+.join-button {
+    display: block;
+    margin: 16px auto;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 24px;
+    width: 160px;
+    border-radius: 5px;
+    background-color:rgba(198, 16, 39, 1);
+    cursor: pointer;
+    transition: background-color 160ms ease 20ms;
+}
+
+.join-button:hover {
+    background-color: #e7132d;
+}
+
+.join-button.disabled {
+    background-color: gray;
+    opacity: 0.5;
+}
+
+.comming-soon {
+    color: rgb(80, 80, 82);
+    font-size: 12px;
+}
+
+.t-shirt {
+    background: #2a2a2a;
+    border-radius: 7px;
+    max-width: 680px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 16px 8px;
+}
+
+.pre-order {
+    margin: 4px;
+}
+
+.how-to-join {
+    max-width: 680px;
+    margin: 64px auto;
+    counter-reset: steps-counter;
+}
+
+.step {
+    display: block;
+    position: relative;
+    margin: 30px 0;
+    padding: 2px 0 32px 68px;
+    width: calc(100% - 68px);
+}
+
+.step:not(:last-child) {
+    border-bottom: 1px solid #333;
+}
+
+.step:before {
+    content: counter(steps-counter);
+    counter-increment: steps-counter;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    font-size: 72px;
+    font-weight: 200;
+    line-height: 1em;
+    color: #b00e23;
+}
+
+.step > div {
+    display: table-cell;
+}
+
+.step-text h4 + p, .step-text p + * {
+    opacity: 0.6;
+}
+
+.step-text {
+    vertical-align: top;
+}
+
+.step-text p:last-child {
+    margin-bottom: 0;
+}
+
+.step-text-before-img {
+    padding-right: 32px;
+}
+
+a.step-link {
+    color: #c61027;
+    transition: color 280ms ease 20ms;
+}
+
+a.step-link:hover {
+    color: #e7132d;
+}
+
+.QR-code-bg {
+    width: 120px;
+    height: 120px;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0 3px 4px 1px #000;
+}
+
+.QR-code {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: url("/images/QR-code-join-wechat-group.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    line-height: 1.6;
+    background-color: #101010;
+}
+
+.footer-content {
+    display: block;
+    font-size: 12px;
+    color: rgb(88, 88, 88);
+}
+
+footer ol {
+    padding: 0 18px;
+    margin-top: 0;
+}
+
+.final {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #333;
+}
+
+.copyright {
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.language {
+    float: none;
+    display: block;
+    margin-top: 6px;
+}
+
+.language a {
+    color: rgb(150, 150, 150);
+    transition: color 240ms ease 40ms;
+}
+
+.language a:hover {
+    color: rgb(82, 180, 219);
+}
+
+@media ( min-width: 414px ) {
+    br.plus {
+        display: none;
+    }
+    html[lang=zh-cmn-Hans-CN] footer .language {
+        float: right;
+        display: inline-block;
+        margin-top: 0;
+    }
+}
+
+@media ( min-width: 375px ) {
+    html[lang=zh-cmn-Hans-CN] footer br.plus {
+        display: none;
+    }
+}
+
+@media ( min-width: 507px ) {
+    .language {
+        float: right;
+        display: inline-block;
+        margin-top: 0;
+    }
+}
+
+@media ( max-width: 500px ) {
+    html[lang=en-US] .step > div {
+        display: block;
+    }
+    html[lang=en-US] .step-text > *:first-child {
+        margin-top: 0;
+    }
+    html[lang=en-US] .step-text-before-img {
+        padding-right: 0;
+    }
+    html[lang=en-US] .step-img .QR-code-bg {
+        margin: 24px 0 0;
+    }
+}
+
+@media ( max-width: 414px ) {
+    .nav-content,
+    .footer-content {
+        padding: 0 16px;
+    }
+    .main {
+        padding: 16px;
+    }
+    .step > div {
+        display: block;
+    }
+    .step-text > *:first-child {
+        margin-top: 0;
+    }
+    .step-text-before-img {
+        padding-right: 0;
+    }
+    .step-img .QR-code-bg {
+        margin: 24px 0 0;
+    }
+}
+
+/* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃*/
+/*@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {*/
+/*    .QR {*/
+/*        background: #2a2a2a;*/
+/*        border-radius: 7px;*/
+/*        max-width: 680px;*/
+/*        margin: 50px;*/
+/*        margin-top: 50px;*/
+/*        padding: 16px 8px;*/
+/*        padding: 20px;*/
+/*        background: rgba(100, 100, 100, 0.7);*/
+/*        background: rgba(0, 0, 0, 0.4);*/
+/*        color: #eee;*/
+/*        -webkit-backdrop-filter: blur(10px);*/
+/*        backdrop-filter: blur(10px);*/
+/*    }*/
+/*}*/
+/**/
+/* 若浏览器器不支持，则不透明化 */
+/*@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {*/
+/*    .QR {*/
+/*        background: #2a2a2a;*/
+/*        border-radius: 7px;*/
+/*        max-width: 680px;*/
+/*        margin: 50px;*/
+/*        margin-top: 50px;*/
+/*        padding: 16px 8px;*/
+/*        padding: 20px;*/
+/*    }*/
+/*}*/
