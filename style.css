@@ -4,7 +4,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust：100%;
+    text-size-adjust： 100%;
 }
 
 body {
@@ -356,6 +356,13 @@ footer ol {
     .step-img .QR-code-bg {
         margin: 24px 0 0;
     }
+}
+
+.QR-blur{  
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);    
 }
 
 /* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃*/
