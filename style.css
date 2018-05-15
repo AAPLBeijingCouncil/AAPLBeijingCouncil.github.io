@@ -142,6 +142,7 @@ html[lang=zh-cmn-Hans-CN] .introduction {
     color: rgba(255, 255, 255, 0.9);
     line-height: 24px;
     width: 160px;
+    font-weight: 500;
     border-radius: 5px;
     background-color:rgba(198, 16, 39, 1);
     cursor: pointer;
