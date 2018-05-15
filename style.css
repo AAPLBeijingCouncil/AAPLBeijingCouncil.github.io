@@ -4,7 +4,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust： 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -141,6 +141,8 @@ html[lang=zh-cmn-Hans-CN] .introduction {
     padding: 10px;
     color: rgba(255, 255, 255, 0.9);
     line-height: 24px;
+    font-size: 17px;
+    font-weight: 500;
     width: 160px;
     border-radius: 5px;
     background-color:rgba(198, 16, 39, 1);
