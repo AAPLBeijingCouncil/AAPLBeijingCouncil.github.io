@@ -52,7 +52,8 @@ span.nowrap {
 }
 
 /* 若浏览器支持 backdrop-filter，则不透明度为 60%，并启用高斯模糊 */
-@supports ( -webkit-backdrop-filter: none ) or ( backdrop-filter: none ) {
+
+@supports ( -webkit-backdrop-filter: none) or ( backdrop-filter: none) {
     .navbar {
         background-color: rgba(0, 0, 0, 0.6);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -61,6 +62,7 @@ span.nowrap {
 }
 
 /* Altered by Houston: make the page look good on iPhone X */
+
 .nav-content,
 .footer-content {
     max-width: 980px;
@@ -71,6 +73,7 @@ span.nowrap {
 }
 
 /* If support max() */
+
 @supports (padding: max(0px)) {
     .nav-content,
     .footer-content {
@@ -97,11 +100,11 @@ main {
     animation-fill-mode: both;
 }
 
-@media ( min-width: 768px ) {
+@media ( min-width: 768px) {
     main {
         background-size: 444px 2673px, 500px 2673px;
         background-position: left top, right top;
-        background-repeat: repeat-y , repeat-y;
+        background-repeat: repeat-y, repeat-y;
         background-image: image-set(url("/images/bg_device_left.png") 1x, url("/images/bg_device_left@2x.png") 2x), image-set(url("/images/bg_device_right.png") 1x, url("/images/bg_device_right@2x.png") 2x);
         animation: device-river 120s linear infinite;
         animation-fill-mode: both;
@@ -109,8 +112,12 @@ main {
 }
 
 @keyframes device-river {
-    from { background-position: left 2673px, right 2673px; }
-    to { background-position: left 0, right 0; }
+    from {
+        background-position: left 2673px, right 2673px;
+    }
+    to {
+        background-position: left 0, right 0;
+    }
 }
 
 .text-center {
@@ -145,7 +152,7 @@ html[lang=zh-cmn-Hans-CN] .introduction {
     font-weight: 500;
     width: 160px;
     border-radius: 5px;
-    background-color:rgba(198, 16, 39, 1);
+    background-color: rgba(198, 16, 39, 1);
     cursor: pointer;
     transition: background-color 160ms ease 20ms;
 }
@@ -207,11 +214,12 @@ html[lang=zh-cmn-Hans-CN] .introduction {
     color: #b00e23;
 }
 
-.step > div {
+.step>div {
     display: table-cell;
 }
 
-.step-text h4 + p, .step-text p + * {
+.step-text h4+p,
+.step-text p+* {
     opacity: 0.6;
 }
 
@@ -298,7 +306,7 @@ footer ol {
     color: rgb(82, 180, 219);
 }
 
-@media ( min-width: 414px ) {
+@media ( min-width: 414px) {
     br.plus {
         display: none;
     }
@@ -309,13 +317,13 @@ footer ol {
     }
 }
 
-@media ( min-width: 375px ) {
+@media ( min-width: 375px) {
     html[lang=zh-cmn-Hans-CN] footer br.plus {
         display: none;
     }
 }
 
-@media ( min-width: 507px ) {
+@media ( min-width: 507px) {
     .language {
         float: right;
         display: inline-block;
@@ -323,11 +331,11 @@ footer ol {
     }
 }
 
-@media ( max-width: 500px ) {
-    html[lang=en-US] .step > div {
+@media ( max-width: 500px) {
+    html[lang=en-US] .step>div {
         display: block;
     }
-    html[lang=en-US] .step-text > *:first-child {
+    html[lang=en-US] .step-text>*:first-child {
         margin-top: 0;
     }
     html[lang=en-US] .step-text-before-img {
@@ -338,7 +346,7 @@ footer ol {
     }
 }
 
-@media ( max-width: 414px ) {
+@media ( max-width: 414px) {
     .nav-content,
     .footer-content {
         padding: 0 16px;
@@ -346,10 +354,10 @@ footer ol {
     .main {
         padding: 16px;
     }
-    .step > div {
+    .step>div {
         display: block;
     }
-    .step-text > *:first-child {
+    .step-text>*:first-child {
         margin-top: 0;
     }
     .step-text-before-img {
@@ -360,40 +368,70 @@ footer ol {
     }
 }
 
-.QR-blur{  
-    -webkit-filter: blur(10px); /* Chrome, Opera */
-       -moz-filter: blur(10px);
-        -ms-filter: blur(10px);    
-            filter: blur(10px);    
+.QR-blur {
+    -webkit-filter: blur(10px);
+    /* Chrome, Opera */
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
 }
 
 /* 若浏览器支持 backdrop-filter，则透明度为 50%，并启用毛玻璃*/
+
 /*@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {*/
+
 /*    .QR {*/
+
 /*        background: #2a2a2a;*/
+
 /*        border-radius: 7px;*/
+
 /*        max-width: 680px;*/
+
 /*        margin: 50px;*/
+
 /*        margin-top: 50px;*/
+
 /*        padding: 16px 8px;*/
+
 /*        padding: 20px;*/
+
 /*        background: rgba(100, 100, 100, 0.7);*/
+
 /*        background: rgba(0, 0, 0, 0.4);*/
+
 /*        color: #eee;*/
+
 /*        -webkit-backdrop-filter: blur(10px);*/
+
 /*        backdrop-filter: blur(10px);*/
+
 /*    }*/
+
 /*}*/
+
 /**/
+
 /* 若浏览器器不支持，则不透明化 */
+
 /*@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {*/
+
 /*    .QR {*/
+
 /*        background: #2a2a2a;*/
+
 /*        border-radius: 7px;*/
+
 /*        max-width: 680px;*/
+
 /*        margin: 50px;*/
+
 /*        margin-top: 50px;*/
+
 /*        padding: 16px 8px;*/
+
 /*        padding: 20px;*/
+
 /*    }*/
+
 /*}*/
