@@ -100,6 +100,11 @@ main {
     animation-fill-mode: both;
 }
 
+.page-not-found main {
+    height: 60vh;
+    min-height: 400px;
+}
+
 @media ( min-width: 768px) {
     main {
         background-size: 444px 2673px, 500px 2673px;
@@ -126,6 +131,10 @@ main {
 
 .section {
     margin-top: 62px;
+}
+
+.section-page-not-found {
+    margin-top: 200px;
 }
 
 .introduction {
