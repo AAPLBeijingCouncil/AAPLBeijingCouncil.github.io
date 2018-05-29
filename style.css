@@ -82,8 +82,42 @@ span.nowrap {
     }
 }
 
+#banner_logo {
+    background-size: 20px 44px;
+    background-repeat: no-repeat;
+    background-image: url("./images/banner_logo.png");
+    background-position: center center;
+    width: 20px
+}
+
+@media only screen and (max-width: 767px) {
+    #banner-logo {
+        background-size: 18px 48px;
+        background-repeat: no-repeat;
+        background-image: url("./images/banner_logo.png")
+    }
+}
+
 .nav-content a {
     color: white;
+}
+
+.navItem {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+    float:left;
+}
+.navItem_menu {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+    float:right;
+}
+
+
+.navItem.is-active {
+    color: rgb(88, 88, 88);
 }
 
 main {
@@ -444,3 +478,90 @@ footer ol {
 /*    }*/
 
 /*}*/
+
+.articleCard {
+    position: relative;
+    display: block;
+    margin: 1em auto;
+    width: 55%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.article_title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #FFF;
+    margin: 4px;
+}
+
+.articlecard-meta {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #666;
+    text-align: left;
+}
+
+.articleCard-imageCell {
+    margin-left: 8px;
+    border-radius: 6px;
+}
+
+.articleCard-content {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.articleCard-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 18px;
+    border-radius: inherit;
+/*    background-color: hsla(0,0%,96%,.88);*/
+    background: #333;
+}
+
+.article_introduction {
+    display: block;
+/*    margin-top: 4px;*/
+    font-size: 14px;
+/*    line-height: 1.25;*/
+    color: #CCC;
+    text-align:left;
+    margin: 4px;
+}
+
+p1 {
+/*    margin-bottom: 24px;*/
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    word-wrap: break-word;
+    text-align:left;
+}
+
+.articleCard-image {
+    display: block;
+/*    width: 60px;*/
+/*    height: 60px;*/
+    border-radius: inherit;
+}
