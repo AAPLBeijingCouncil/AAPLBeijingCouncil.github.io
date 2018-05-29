@@ -550,6 +550,10 @@ footer ol {
     margin: 4px;
 }
 
+.a_br{
+    display: inline;
+}
+
 p1 {
 /*    margin-bottom: 24px;*/
     font-size: 16px;
@@ -567,6 +571,9 @@ p1 {
 }
 
 @media screen and (max-width: 480px) {
+    .a_br{
+    display: none;
+}   
     .articleCard-image {
     display: none;
 }
@@ -619,6 +626,10 @@ p1 {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
+    .a_br{
+    display: none;
+}   
+    
      .articleCard {
     position: relative;
     display: block;
