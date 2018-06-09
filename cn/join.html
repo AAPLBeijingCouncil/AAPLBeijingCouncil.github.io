@@ -16,14 +16,20 @@
     <link rel="mask-icon" href="/images/mask-icon.svg" color="#333333">
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-120580475-1');
+    </script>
 </head>
 
 <body class="zh-cn dark">
     <nav class="navbar">
         <div class="nav-content">
-            <a href="/cn">
-                <strong>AAPL</strong> Beijing Council
-            </a>
+            <a class="navItem" href="/" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarSiteTitle'});"><strong>AAPL</strong> Beijing Council</a>
+            <!--            <a class="navItem_menu" href="/about-us" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarAboutUs'});">关于我们</a>-->
+            <a class="navItem_menu" href="/articles" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarArticles'});">文章</a>
         </div>
     </nav>
     <main class="main">
@@ -64,7 +70,7 @@
                 <div class="copyright">版权所有 © 2018 AAPL Beijing Council
                     <br class="plus">保留一切权利。</div>
                 <div class="language">
-                    <a href="/join">English</a>
+                    <a href="/join" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'footerSwitchToEnglish'});">English</a>
                 </div>
             </div>
         </div>

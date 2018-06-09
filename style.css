@@ -125,7 +125,7 @@ main {
     background-color: #202020;
 }
 
-main {
+.main.anibg {
     background-size: 444px 2673px;
     background-position: left top;
     background-repeat: repeat-y;
@@ -140,7 +140,7 @@ main {
 }
 
 @media ( min-width: 768px) {
-    main {
+    .main.anibg {
         background-size: 444px 2673px, 500px 2673px;
         background-position: left top, right top;
         background-repeat: repeat-y, repeat-y;
