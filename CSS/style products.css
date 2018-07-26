@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background: #d8f0ea;
+}
+h1, p, span {
+/*  font-family: monospace;*/
+  font-weight: 300;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+h1, h1 + p {
+  margin: 2rem 1rem;
+}
+.wrapper {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3rem;
+}
+.box {
+  width: 15rem;
+  height: 20rem;
+  padding: 0 2rem 3rem;
+  -webkit-transition: opacity 0.5s linear 0.3s,
+    -webkit-transform 0.3s linear 0s,
+    -webkit-filter 0.5s linear 0.3s;
+  transition: opacity 0.5s linear 0.3s,
+    -webkit-transform 0.3s linear 0s,
+    -webkit-filter 0.5s linear 0.3s;
+  transition: transform 0.3s linear 0s,
+    filter 0.5s linear 0.3s,
+    opacity 0.5s linear 0.3s;
+  transition:
+    transform 0.3s linear 0s,
+    filter 0.5s linear 0.3s,
+    opacity 0.5s linear 0.3s,
+    -webkit-transform 0.3s linear 0s,
+    -webkit-filter 0.5s linear 0.3s;
+  /*transform-origin: top center;*/
+}
+.product {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  background-position: top 3rem center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: box-shadow 0.5s linear,
+    height 0.1s linear 0s;
+  transition:
+    box-shadow 0.5s linear,
+    height 0.1s linear 0s;
+}
+.PF001_hello{
+    background-image: url(../images/Products/PF001_hello.JPG);
+}
+.PF001_Charging{
+    background-image: url(../images/Products/PF001_Charging.JPG);
+}
+.PF001_iMessage{
+    background-image: url(../images/Products/PF001_iMessage.JPG);
+}
+.name {
+  display: block;
+  padding: 1rem 0.5rem;
+}
+.description {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  display: block;
+  padding: 0 1.5rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s linear 0s;
+  transition: opacity 0.1s linear 0s;
+}
+.wrapper:hover .box:not(:hover)  {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 0.5;
+}
+.box:hover  {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: opacity 0.1s linear 0s,
+    -webkit-transform 0.3s linear 0.3s,
+    -webkit-filter 0.1s linear 0s;
+  transition: opacity 0.1s linear 0s,
+    -webkit-transform 0.3s linear 0.3s,
+    -webkit-filter 0.1s linear 0s;
+  transition: transform 0.3s linear 0.3s,
+    filter 0.1s linear 0s,
+    opacity 0.1s linear 0s;
+  transition:
+    transform 0.3s linear 0.3s,
+    filter 0.1s linear 0s,
+    opacity 0.1s linear 0s,
+    -webkit-transform 0.3s linear 0.3s,
+    -webkit-filter 0.1s linear 0s;
+}
+.box:hover .product {
+  height: 23rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: box-shadow 1s linear,
+    height 0.3s linear 0.5s;
+  transition:
+    box-shadow 1s linear,
+    height 0.3s linear 0.5s;
+}
+.box:hover .description {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear 0.75s;
+  transition: opacity 0.3s linear 0.75s;
+}
