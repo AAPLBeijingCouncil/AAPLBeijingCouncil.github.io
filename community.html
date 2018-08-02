@@ -16,7 +16,6 @@
     <link rel="mask-icon" href="./images/mask-icon.svg" color="#333333">
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./CSS/style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120580475-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -28,9 +27,9 @@
 <body class="en-us dark">
     <nav class="navbar">
         <div class="nav-content">
-            <a class="navItem" href="#" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarSiteTitle'});">
+            <a class="navItem" href="/" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarSiteTitle'});">
                 <strong>AAPL</strong> Beijing Council</a>
-            <!--<a class="navItem_menu" href="/about-us" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarAboutUs'});">About Us</a>-->
+<!--            <a class="navItem_menu" href="/about-us" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarAboutUs'});">About Us</a>-->
             <a class="navItem_menu" href="./community" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarCommunity'});">Community(Beta)</a>
             <a class="navItem_menu" href="./articles" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarArticles'});">Articles</a>
             <a class="navItem_menu" href="./members" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarMembers'});">Members</a>
@@ -38,28 +37,38 @@
         </div>
     </nav>
     <main class="main anibg">
-        <section class="section section-hello text-center">
-            <center>
-                <img height="60px" src="./images/hello.png" />
-            </center>
+        <section class="section section-join">
+            <h1 class="text-center">ABC Community(Beta)指南</h1>
             <p class="introduction">
-                The AAPL Beijing Council is a diverse group of talented Apple users. AAPL is the stock code of Apple Inc. (NASDAQ:AAPL).
-                We do not own the name AAPL, these four uppercase letters simply represent what we value and believe in.
-                Beijing is the capital of the People’s Republic of China, the host country of this user group and home to
-                most of our members.
+                ABC Community (Beta) 是 ABC 的一个实验性项目。致力于推进 ABC 社区化。Beta 版计划现已推出。
             </p>
-            <p class="introduction">
-                However, our members — including software and hardware experts, former employees, shareholders, professionals from other
-                companies, as well as regular Apple users — are located all over the world, not exclusive to Beijing.
-            </p>
-            <p class="introduction">
-                Our primary achievements include loads of bug reports and unique, creative feature suggestions. Moreover, we are not only
-                concerned and confident about Apple’s business and products, but also proud to have such an innovative and
-                responsible company in this world pushing the human race forward.
-            </p>
-            <div class="call-up">
-                <a class="join-button" onclick="gtag('event', 'click', {'event_category': 'button', 'event_label': 'joinUsEnabled'});" href="https://zhuanlan.zhihu.com/p/40994652">Join Us</a>
-<!--                 <span class="comming-soon">The entrance will be opened later.</span> -->
+            <div class="how-to-join">
+                <div class="step">
+                    <div class="step-text step-text-before-img">
+                        <h4>开始使用</h4>
+                        <p>这个社区尚处于开发阶段，目前还有一些问题亟待解决。
+                        <br/>如果您是新成员，想一起探索 ABC 未来的发展方向，并且能接受一些不可预知的 Bug，请点击下方按钮完成注册后，在 ABC 或者 ACC 中联系 DylanX 注册激活您的账号。
+                        <br/>如果您已经是内测组成员，请直接点击下方按钮登陆。
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-text">
+                        <h4>在
+                            <a href="http://obliviate.cf/d/5" title="此社区上的臭虫来这里汇报！"
+                                target="_blank" class="step-link">社区反馈页面</a>提供反馈。</h4>
+                        <p>需要登陆后查看这个页面。当您遇到需要解决的问题时，请通过“社区反馈页面”将反馈发送给 ABC Community。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-text">
+                        <h4>Enjoy.</h4>
+                    </div>
+                </div>
+                <div class="call-up text-center">
+                    <a class="join-button" onclick="gtag('event', 'click', {'event_category': 'button', 'event_label': 'joinUsEnabled'});" href="http://obliviate.cf">进入社区</a>
+                    <span class="comming-soon">请确保已经阅读上面的文本。</span> 
+                </div>
             </div>
         </section>
     </main>
@@ -72,14 +81,13 @@
             </ol>
             <span class="thanks">
                 <em>Thank you to all members of the AAPL Beijing Council. Special thanks to the contributers who made this webpage
-                    possible.
-                </em>
+                    possible.</em>
             </span>
             <div class="final">
                 <div class="copyright">Copyright © 2018 AAPL Beijing Council
                     <br class="plus">All rights reserved.</div>
                 <div class="language">
-                    <a href="/cn" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'footerSwitchToChinese'});">中文</a>
+                    <a href="/cn/404" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'footerSwitchToChinese'});">中文</a>
                 </div>
             </div>
         </div>
