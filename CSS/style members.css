@@ -70,3 +70,35 @@
     text-align:left;
     margin: 4px;
 }
+
+.memberCard_media_members {
+    position: relative;
+/*    display: inline;*/
+    float: left;
+    margin: 10px;
+    width: 266px;
+    box-sizing: border-box;
+/*    max-width: 100%;*/
+    overflow: hidden;
+/*    float:left;*/
+    height: 180px;
+}
+
+.memberCard-image-content_TESTV {
+    width: 223px;
+    border-radius: 6px;
+}
+
+.memberCard-imageCell_media_members {
+    width:260px;
+    border-radius: 12px;
+    height: 100px;
+/*     background-color: rgba(167,170,169,1); */
+    background-color: rgba(64,64,64,1); 
+    display: block;
+/*    margin: 1em auto;*/
+    padding: 20px;
+/*    width: 130px;*/
+    box-sizing: border-box;
+}
+
