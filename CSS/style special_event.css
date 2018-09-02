@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+}
+h1, p, span {
+/*  font-weight: 700;*/
+  text-align: center;
+/*  color: rgba(0, 0, 0, 0.7);*/
+}
+h1, h1 + p {
+  margin: 2rem 1rem;
+}
+
+
+/*Shot on iPhone Campaign / Special Event*/
+
+.campaign{
+/*    background-image: url(https://i.loli.net/2018/08/30/5b878dd25a32c.jpg);*/
+    background-color: black;
+    background-position: center center;
+    background-attachment:fixed;
+    background-size: 100%;
+    text-align:center;
+}
+.purchase_button{
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    display:flex;
+    z-index: 1;
+    float: right;
+    margin: 15px;
+    overflow: auto;
+}
+
+.button_pill{
+    border-radius: 15px;
+    padding: 0 14px;
+    font-size: 15px;
+    line-height: 1.86667;
+    font-weight: 700;
+/*    letter-spacing: 0;*/
+/*    font-family: "SF Pro Text","SF Pro Icons","Apple WebExp Icons Custom","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    color: #0070c9;
+    border: 1px solid #efeff4;
+    background: #efeff4;
+    float:right;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    margin:auto; 
+}
+
+.apple_embeded{
+    max-width: 800px;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f8f8f8;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0;
+    direction: ltr;
+    text-align: left;
+    line-height: 1.33343;
+    font-weight: 400;
+}
+
+.apple_embeded_headline{
+    font-size: 15px;
+    line-height: 1.33343;
+    font-weight: 400;
+}
+
+.left_col{
+    float: left;
+    width: 400px;
+}
+
+.right_col{
+    float: left;
+    width: 400px;
+}
+
+.picture{
+    margin: 0;
+    position: relative;
+    display: block;
+    z-index: 1;
+    float: left;
+    margin: 15px;
+}
+
+.item_headlings{
+    overflow: auto;
+    margin-left: 10px;
+    padding-right: 1em;
+    display: block;
+    font-size: 17px;
+    color: #333;
+    line-height: 1.38462;
+    font-weight: 400;
+    letter-spacing: 0;
+    direction: ltr;
+    text-align: left;
+}
+
+.item_subtitles{
+    padding-top: .46154em;
+    overflow: auto;
+    margin-left: 10px;
+    padding-right: 1em;
+    display: block;
+    font-size: 13px;
+    color: #8e8e93;
+    line-height: 1.38462;
+    font-weight: 400;
+    letter-spacing: 0;
+    direction: ltr;
+    text-align: left;
+}
+
+.app_info{
+    padding-top: 15px;
+    overflow: auto;
+    width: 200px;
+    float: left;
+}
+
+.app{
+    width: auto;
+    height: 100px;
+}
+
+.icon{
+    border-radius:22.5%;
+    height: 70px;
+    width: 70px;
+}
+@supports ((-webkit-mask-position: initial) or (mask-position: initial)){
+    .icon::before {
+    border: none;
+    border-radius: 0;
+    background: url(https://web-experience.itunes.apple.com/assets/images/masks/icon-app-mask-border-f20f488….svg) center/cover no-repeat;
+}
+}
+
+.small_screen_images{
+    width: 300px;
+    height: 225px;
+    border-radius: 4%;
+}
+
+@media screen and (max-width: 500px) {
+    .campaign{
+        padding: 5%;
+        background-size: 110%;
+    }
+    h1{
+        font-size: 35px;
+    }
+    
+    .apple_embeded{
+        max-width: 500px;
+        border-radius: 0;        
+        padding-top: 3%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    .item_headlings{
+        font-size: 14px;
+    }
+    .item_subtitles{
+        font-size: 12px;
+    }
+    .icon{
+        height: 48px;
+        width: 48px;
+        margin: 0 auto;
+    }
+    .button_pill{
+        font-size: 13px;
+        border-radius: 13px;
+    }
+    .app_info{
+        width: 140px;
+    }
+    .app{
+        width: 319px;
+        height: 78px;
+        margin: auto auto;
+    }
+    .purchase_button{
+        height: 70px;
+        width: 70px;
+    }
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+    .small_screen_images{
+        width: 400px;
+        height: 300px;
+    }
+    .apple_embeded{
+        max-width: 600px;
+        padding: 10%;
+    }
+    .icon{
+        height: 70px;
+        width: 70px;
+    }
+    .left_col{
+        float: none;
+        width: 400px;
+    }
+
+    .right_col{
+        float: none;
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 767px){
+    .small_screen_wrapper{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px){
+    .wrapper{
+        display: none;
+    }
+}
+
+.Apple_Special_Gold{
+    background: -webkit-gradient(linear, right top, left top, color-stop(33%, #c4987a), color-stop(73%, #ffd5bf));
+    background: -webkit-linear-gradient(right, #c4987a 33%, #ffd5bf 73%);
+    background: linear-gradient(to left, #c4987a 33%, #ffd5bf 73%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.typography-intro {
+    color:#fff;
+    font-size: 20px;
+    line-height: 1.38105;
+    font-weight: 400;
+    letter-spacing: .011em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.icon-downloadcircle {
+    border: 1px solid #fff;
+    width: 18px;
+    height: 18px;
+/*    margin: 0 auto;*/
+/*    float: left;*/
+/*    content: "⇩";*/
+    border-radius: 50%;
+/*    position: absolute;*/
+/*    display:block;*/
+/*    left: calc(50% - 10px);*/
+/*    right: 50%;*/
+}

@@ -16,6 +16,7 @@
     <link rel="mask-icon" href="./images/mask-icon.svg" color="#333333">
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style%20special_event.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120580475-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -27,26 +28,48 @@
 
 <body class="en-us dark">
     <nav class="navbar">
-        <div class="nav-content">
-            <a class="navItem" href="#" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarSiteTitle'});">
+        <div class="nav-content" >
+            <a class="navItem" href="#" style="color: rgba(224,177,157,1);" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarSiteTitle'});">
                 <strong>AAPL</strong> Beijing Council</a>
             <!--<a class="navItem_menu" href="/about-us" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarAboutUs'});">About Us</a>-->
-<!--            <a class="navItem_menu" href="./community" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarCommunity'});">Community</a>-->
-            <a class="navItem_menu" href="./articles" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarArticles'});">Articles</a>
-            <a class="navItem_menu" href="./members" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarMembers'});">Members</a>
-            <a class="navItem_menu" href="./products" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarProducts'});">Products</a>
+<!--            <a class="navItem_menu" href="./community" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarCommunity'});" style="color: rgba(224,177,157,1);">Community</a>-->
+            <a class="navItem_menu" href="./articles" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarArticles'});" style="color: rgba(224,177,157,1);">Articles</a>
+            <a class="navItem_menu" href="./members" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarMembers'});" style="color: rgba(224,177,157,1);">Members</a>
+            <a class="navItem_menu" href="./products" onclick="gtag('event', 'click', {'event_category': 'textLink', 'event_label': 'navBarProducts'});" style="color: rgba(224,177,157,1);">Products</a>
         </div>
     </nav>
-    <main class="main anibg">
-        <section class="section section-hello text-center">
+    <main class="main anibg"  style="padding-left: 0px;padding-right: 0px;">
+        <section class="section-hello text-center campaign">
+<!--            <div class="masked">-->
+                <p class="introduction"><br></p>
+                <center>
+                    <img height="200px" src="./images/ABClogo-2018-SpecialEvent.png" />
+                </center>
+                <h1 class="introduction Apple_Special_Gold" >Apple 2018 秋季特别活动<br>ABC 线上观影活动</h1>
+<!--            </div>-->
+
+            <p class="introduction" style="color: rgba(224,177,157,1);">
+                北京时间 9 月 12 日 23:00
+            </p>
+            <p class="introduction" style="color: rgba(224,177,157,1);">
+                AAPL Beijing Council | 哔哩哔哩弹幕视频 | Discord
+            </p>
+                <a href="./utilities/event.ics" class="typography-intro">添加到日历 ⇩</a>
+<!--            <a class="icon-downloadcircle">⇩</a>-->
+            <div class='clear'></div><!--清除浮动-->
+            <div class="call-up">
+                <a class="join-button" style="background-color: rgba(3, 136, 231, 1);width: 100px;" onclick="gtag('event', 'click', {'event_category': 'button', 'event_label': 'joinUsDisabled'});" href="#">参加</a>
+                 <span class="comming-soon">入口将会在稍后开放</span> 
+            </div>
+            <h1 class="introduction"><br></h1>
+        </section>
+        
+         <section class="section section-hello text-center">
             <center>
-                <img height="60px" src="./images/hello.png" />
+                <h1 class="introduction Apple_Special_Gold">Apple 2018 秋季特别活动观影指南</h1>
             </center>
             <p class="introduction">
-                The AAPL Beijing Council is a diverse group of talented Apple users. AAPL is the stock code of Apple Inc. (NASDAQ:AAPL).
-                We do not own the name AAPL, these four uppercase letters simply represent what we value and believe in.
-                Beijing is the capital of the People’s Republic of China, the host country of this user group and home to
-                most of our members.
+                又该团聚了！
             </p>
             <p class="introduction">
                 However, our members — including software and hardware experts, former employees, shareholders, professionals from other
@@ -57,26 +80,39 @@
                 concerned and confident about Apple’s business and products, but also proud to have such an innovative and
                 responsible company in this world pushing the human race forward.
             </p>
+<!--
             <div class="call-up">
                 <a class="join-button" onclick="gtag('event', 'click', {'event_category': 'button', 'event_label': 'joinUsEnabled'});" href="https://zhuanlan.zhihu.com/p/40994652">Join Us</a>
-<!--                 <span class="comming-soon">The entrance will be opened later.</span> -->
+                 <span class="comming-soon">The entrance will be opened later.</span> 
             </div>
-        </section>
-        
-        <section class="section section-hello text-center" style="background-color:rgba(59,63,65,1);">
-            <p><br></p>
-            <h1 class="introduction" style="font-size: 30px">This Month at ABC</h1>
-            <center><iframe class="ThisMonthAtABCiframe" src="./ThisMonthAtABC.html" frameborder="0"></iframe></center>
+-->
         </section>
         
     </main>
     <footer>
         <div class="footer-content">
-            <ol>
+            <nav class="breadcrumbs">
+					<a href="./" class="home breadcrumbs-home">
+                        <span class="breadcrumbs-home-icon"></span>
+					</a>
+					<div class="breadcrumbs-path">
+						<ol class="breadcrumbs-list">
+							<li class="breadcrumbs-item">
+									<a class="breadcrumbs-link">This Month at ABC</a>
+							</li>
+								<li class="breadcrumbs-item">Watch Apple Special Event with ABC</li>
+						</ol>
+					</div>
+            </nav>
+            <div class='clear'></div><!--清除浮动-->
+            <div class="final" style="border-top: 1px solid #333;">
+                <ol>
                 <li>The company name “Apple Inc.” and stock name “AAPL” belong to Apple Inc.</li>
                 <li>The name “Apple” is a trademark of Apple Inc.</li>
                 <li>The logo “hello.” belongs to Apple Inc.</li>
+<!--                <li>AAPL Beijing Council 对此活动有最终解释权。</li>-->
             </ol>
+            </div>
             <span class="thanks">
                 <em>Thank you to all members of the AAPL Beijing Council. Special thanks to the contributers who made this webpage
                     possible.
