@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+/*@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");*/
+    body{
+/*         background-color: #000;*/
+    }
+    
+.container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 650px;
+  height: 160px;
+}
+
+h1 {
+/*  font-family: "Lato", sans-serif;*/
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Microsoft YaHei UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #c4987a;
+}
+
+#timer {
+  color: #F6F4F3;
+  text-align: center;
+  text-transform: uppercase;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Microsoft YaHei UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: .7em;
+  letter-spacing: 5px;
+}
+
+.days, .hours, .minutes, .seconds {
+  display: inline-block;
+  padding: 20px;
+  width: 70px;
+  border-radius: 15px;
+}
+
+.days {
+  background: #202020;
+/*  background: #EF2F3C;*/
+}
+
+.hours {
+  background: #202020;
+/*  background: #F6F4F3;*/
+/*  color: #c4987a;*/
+}
+
+.minutes {
+  background: #202020;
+/*  background: #276FBF;*/
+}
+
+.seconds {
+  background: #202020;
+/*  background: #F0A202;*/
+}
+
+.numbers {
+/*  font-family: "Montserrat", sans-serif;*/
+  color: #c4987a;
+/*  color: #183059;*/
+  font-size: 4em;
+}
+
+</style>
+<style type="text/css">.tb960x90,.tb300x250{display:none!important;display:none}</style></head>
+<body>
+
+<div class="container">
+  <div id="timer"><div class="days">   <div class="numbers">0</div>天</div> <div class="hours">   <div class="numbers">0</div>小时</div> <div class="minutes">   <div class="numbers">0</div>分钟</div> <div class="seconds">   <div class="numbers">0</div>秒</div> </div>
+<!--  <h1>4th of july counter</h1>-->
+</div>
+
+
+<script>
+const fourthOfJuly = new Date("September 13, 2018 01:00:00").getTime();
+
+// countdown
+let timer = setInterval(function() {
+
+  // get today's date
+  const today = new Date().getTime();
+
+  // get the difference
+  const diff = fourthOfJuly - today;
+
+  // math
+  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  // display
+  document.getElementById("timer").innerHTML =
+    "<div class=\"days\"> \
+  <div class=\"numbers\">" + days + "</div>天</div> \
+<div class=\"hours\"> \
+  <div class=\"numbers\">" + hours + "</div>小时</div> \
+<div class=\"minutes\"> \
+  <div class=\"numbers\">" + minutes + "</div>分钟</div> \
+<div class=\"seconds\"> \
+  <div class=\"numbers\">" + seconds + "</div>秒</div> \
+</div>";
+
+}, 1000);</script>
+
+
+
+<div id="download_plus_animation"></div></body></html>
