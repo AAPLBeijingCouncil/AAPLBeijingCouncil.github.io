@@ -271,3 +271,26 @@ h1, h1 + p {
 /*    left: calc(50% - 10px);*/
 /*    right: 50%;*/
 }
+
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .masked{
+/*        background-image: -webkit-linear-gradient(left, #fff, #777 25%, #fff 50%,#777 75%, #fff);*/
+        background-image: -webkit-linear-gradient(left, #c4987a, #ffd5bf 25%, #c4987a 50%,#ffd5bf 75%, #c4987a);
+/*        background-image: -webkit-gradient(linear, right top, left top, color-stop(33%, #c4987a), color-stop(73%, #ffd5bf));*/
+/*
+        background: -webkit-linear-gradient(right, #c4987a 33%, #ffd5bf 73%);
+        background: linear-gradient(to left, #c4987a 33%, #ffd5bf 73%);
+*/
+/*        #E6D205*/
+/*        rgba(0,237,170,0.5)*/
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: masked-animation 2s infinite linear;
+    }
+}
+@-webkit-keyframes masked-animation {
+    0%  { background-position: 0 0;}
+    100% { background-position: -100% 0;}
+}
