@@ -8,7 +8,7 @@
 @media only screen and (min-width: 0px) and (max-width: 810px) {
 .hero{
     background-image: none;
-    background-color: rgba(29,32,89,1);
+    background-color: rgba(245,245,245,1);
     background-attachment:scroll;
 /*    background-attachment:fixed;*/
     background-size: 100%;
