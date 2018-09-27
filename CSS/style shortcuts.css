@@ -1,22 +1,33 @@
 .hero{
-/*    background-image: url(https://i.loli.net/2018/08/30/5b878dd25a32c.jpg);*/
-    background-image: url(../images/Shortcut-hero.jpg);
+    background-image: url(../images/Shortcut-hero-full.jpg);
     background-position: center center;
     background-attachment:fixed;
-    background-size: 100%;
+    background-size: 160%;
 }
+    
+
 @media only screen and (min-width: 0px) and (max-width: 810px) {
-.hero{
+    
+    .hero{
     background-image: none;
     background-color: rgba(245,245,245,1);
     background-attachment:scroll;
-/*    background-attachment:fixed;*/
     background-size: 100%;
 }
     .description{
         display: none;
     }
 }
+
+@media only screen and (min-width: 810px) and (max-width: 1200px) {
+.hero{
+    background-image: url(../images/Shortcut-hero.jpg);
+    background-position: center center;
+    background-attachment:fixed;
+    background-size: 150%;
+}
+}
+
 
 .member {
     max-width: 950px;
